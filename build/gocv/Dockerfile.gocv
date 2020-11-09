@@ -1,4 +1,4 @@
-FROM golang:1.15.3-buster AS prepare-amd64
+FROM golang:1.15.4-buster AS prepare-amd64
 
 RUN set -eux; \
     \
@@ -14,7 +14,7 @@ RUN set -eux; \
     \
     rm -rf /var/lib/apt/lists/*
 
-FROM golang:1.15.3-buster AS prepare-arm64
+FROM golang:1.15.4-buster AS prepare-arm64
 
 RUN mkdir -p /usr/local/cuda
 
@@ -33,7 +33,7 @@ RUN set -eux; \
     \
     rm -rf /var/lib/apt/lists/*
 
-FROM golang:1.15.3-buster
+FROM golang:1.15.4-buster
 
 # ldconfig cache
 COPY --from=prepare /etc/ld.so.* /etc/

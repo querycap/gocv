@@ -1,6 +1,6 @@
 FROM golang:1.15 AS golang
 
-FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04 AS prepare-amd64
+FROM nvidia/cuda:11.4.1-cudnn8-devel-ubuntu18.04 AS prepare-amd64
 
 FROM ubuntu:18.04 AS prepare-arm64
 RUN mkdir -p /usr/local/cuda

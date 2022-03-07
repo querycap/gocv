@@ -1,4 +1,4 @@
-FROM golang:1.15 AS golang
+FROM golang:1.17.8 AS golang
 
 FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04 AS prepare-amd64
 

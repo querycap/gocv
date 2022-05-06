@@ -45,7 +45,7 @@ jobs:
         fi
 
         make prepare
-    - uses: docker/build-push-action@v2
+    - uses: docker/build-push-action@v3
       name: Build & May Push
       with:
         build-args: ${{ steps.prepare.outputs.build_args }}
